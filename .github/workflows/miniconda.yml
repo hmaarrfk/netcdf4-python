@@ -11,6 +11,7 @@ jobs:
     #env:
     #  NO_NET: 1
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.6", "3.7", "3.8", "3.9", "3.10" ]
         os: [windows-latest, ubuntu-latest, macos-latest]
@@ -46,6 +47,7 @@ jobs:
   run-mpi:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         python-version: [ "3.9" ]
         os: [ubuntu-latest]
