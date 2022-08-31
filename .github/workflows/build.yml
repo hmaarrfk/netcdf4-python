@@ -12,6 +12,7 @@ jobs:
       CC: mpicc.mpich
       #NO_NET: 1
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.9"]
     steps:
